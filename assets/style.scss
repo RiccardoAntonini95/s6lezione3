@@ -1,0 +1,63 @@
+@import 'reset';
+@import 'color';
+@import 'font';
+@import 'spacing';
+@import 'mixins';
+@import 'buttons';
+@import 'animations';
+
+
+
+.hero{
+    background-color: $hero-color; 
+    margin-bottom: $margin-down;
+    padding-bottom: 20px;
+}
+
+h1{
+    @include title-big;
+    font-family: $font-principale;
+}
+
+a, p, .nav-link, .btn {
+    color: $text-color;
+    font-family: $font-principale;
+}
+
+.btn{
+    @include buttons;
+}
+
+.img-fluid{
+    @include floating;
+    animation: $animation-setup;
+}
+
+.first-btn{
+    background-color: $first-btn-color;
+}
+
+.second-btn{
+    background-color: $second-btn-color;
+}
+
+.third-btn{
+    background-color: $third-btn-color;
+}
+
+.justify-content-between{
+    @include grid(4)
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -60%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+

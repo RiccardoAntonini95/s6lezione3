@@ -1,0 +1,19 @@
+@mixin title-big{
+    font-size: 3.5em;
+    padding: 0.8em 0 0.2em 0;
+}
+
+@mixin floating{
+    box-shadow: 0px 0px 17px 4px black;
+    border-radius: 10px;
+    border: 1px solid violet;
+}
+
+@mixin grid($num-elementi){ //container diventa flex e wrap
+    display: flex;
+    flex-wrap: wrap;
+    > *{ // ogni elemento all'interno del container ha width in base al parametro che li rende tutti uguali 
+        width: calc(100% / #{$num-elementi});
+        box-sizing: border-box;
+    }
+}
